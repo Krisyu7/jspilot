@@ -94,6 +94,19 @@ jspilot/
         ├── jobs/[id]/page.tsx # Job detail + CL + Resume
         └── applications/page.tsx # Application tracker
 ```
+## Customization
+
+### Cover Letter Prompt
+Edit the prompt in `backend/app/services/cover_letter_generator.py`
+Look for the `prompt = f"""` section to customize tone, structure, and requirements.
+
+### Resume Optimization Prompt
+Edit the prompt in `backend/app/services/resume_optimizer.py`
+Modify the formatting rules and section requirements to match your target roles.
+
+### Job Match Prompt
+Edit the prompt in `backend/app/services/job_matcher.py`
+Adjust the scoring criteria and match reasoning to fit your preferences.
 
 ## Notes
 
