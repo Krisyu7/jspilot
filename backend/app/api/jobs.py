@@ -60,6 +60,19 @@ def get_jobs(db: Session = Depends(get_db)):
 
     return jobs
 
+@router.delete("/{job_id}")
+def delete_job(job_id: str, db: Session = Depends(get_db)):
+    """删除职位"""
+    job = db.query(Job).filter(Job.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="职位不存在")
+
+    # 先删关联数据
+    db.query(JobMatch).filter(JobMatch.job_id == job_id).delete()
+    db.delete(job)
+    db.commit()
+
+    return {"status": "ok"}
 
 @router.get("/{job_id}")
 def get_job_detail(job_id: str, db: Session = Depends(get_db)):
