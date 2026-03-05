@@ -321,7 +321,7 @@ export default function JobsPage() {
 
         {/* 简历状态 */}
         <div style={{ marginBottom: '32px' }}>
-            <h3 style={{ fontSize: '0.75rem', color: '#555', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 14px' }}>我的简历</h3>
+            <h3 style={{ fontSize: '0.75rem', color: '#555', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 14px' }}>My Resume</h3>
 
             {resume && (
                 <div style={{ background: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: '10px', padding: '16px', marginBottom: '12px' }}>
@@ -379,11 +379,11 @@ export default function JobsPage() {
 
         {/* 筛选条件 */}
         <div>
-            <h3 style={{ fontSize: '0.75rem', color: '#555', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 14px' }}>筛选条件</h3>
+            <h3 style={{ fontSize: '0.75rem', color: '#555', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 14px' }}>Filters</h3>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <div>
-                    <label style={{ fontSize: '0.75rem', color: '#666', display: 'block', marginBottom: '5px' }}>关键词（逗号分隔）</label>
+                    <label style={{ fontSize: '0.75rem', color: '#666', display: 'block', marginBottom: '5px' }}>Keywords (comma-separated)</label>
                     <input
                         type="text"
                         value={keywords}
@@ -394,7 +394,7 @@ export default function JobsPage() {
                 </div>
 
                 <div>
-                    <label style={{ fontSize: '0.75rem', color: '#666', display: 'block', marginBottom: '5px' }}>城市</label>
+                    <label style={{ fontSize: '0.75rem', color: '#666', display: 'block', marginBottom: '5px' }}>City</label>
                     <input
                         type="text"
                         value={locations}
@@ -405,7 +405,7 @@ export default function JobsPage() {
                 </div>
 
                 <div>
-                    <label style={{ fontSize: '0.75rem', color: '#666', display: 'block', marginBottom: '5px' }}>工作类型</label>
+                    <label style={{ fontSize: '0.75rem', color: '#666', display: 'block', marginBottom: '5px' }}>Job Type</label>
                     <select
                         value={scheduleType}
                         onChange={e => setScheduleType(e.target.value)}
